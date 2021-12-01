@@ -1,0 +1,17 @@
+
+<!--
+<a routerLink="/menu" style='color:cyan;font-size:24px;'>MENU</a>
+-->
+
+<h1 style='text-align:center;'>Inicio de sesion</h1>
+
+<form action='' method='post' style='width:300px; margin:auto;margin-top:55px;'>
+
+<div style='font-size:24px;'>Usuario: </div><input [(ngModel)]="u.id"    name="id"     style='width:256px;display:inline;margin-bottom:16px;'  >
+<div style='font-size:24px;'>Clave:   </div><input [(ngModel)]="u.clave" name="clave" type='password' style='width:256px;display:inline;margin-bottom:16px;'  >
+
+<input type='submit' value='Iniciar Sesion' (click)='validarUsuario(u)' style='font-size:24px;width:155px;'>
+<br><li style='margin-top:16px;list-style:none;background:white;width:155px;color:black;'><a routerLink="/registroUsuario" style='color:black;text-decoration:none;padding:4px;'>Crear Cuenta</a></li>
+
+</form>
+

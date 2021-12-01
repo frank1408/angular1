@@ -1,0 +1,19 @@
+
+<a routerLink="/menu" style='color:cyan;font-size:24px;'>MENU</a>
+<h5 style='position:absolute;top:0px;right:0px;'>Usuario: {{usuario}}</h5>
+<h1 style='text-align:center;'>Registro de Productos</h1>
+<br>
+
+<form action='' method='post' style='width:300px;margin:auto;'>
+
+<div style='font-size:24px;'>Nombre:          </div><input [(ngModel)]="p.nombre"        name="nombre"         placeholder='nombre'       style='width:256px;display:inline;margin-bottom:16px;'  > 
+<div style='font-size:24px;'>Descripcion:     </div><input [(ngModel)]="p.descripcion"   name="descripcion"    placeholder='descripcion'  style='width:256px;display:inline;margin-bottom:16px;'  >
+<div style='font-size:24px;'>Precio:          </div><input [(ngModel)]="p.precio"        name="precio"         placeholder='precio'       style='width:256px;display:inline;margin-bottom:16px;'  >
+<br>
+
+<input type='submit' value='Registrar' (click)='registrarProducto(p)'   style='font-size:24px;'>
+<input type='reset'  value='Limpiar'   (click)='limpiarProducto()'      style='font-size:24px;margin-left:32px;'>
+
+</form>
+
+

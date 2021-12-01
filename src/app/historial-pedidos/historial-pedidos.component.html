@@ -1,0 +1,45 @@
+
+<a routerLink="/menu">MENU</a>
+<h5 style='position:absolute;top:0px;right:0px;'>Usuario: {{ usuario }}</h5>
+
+<input type='button' value='Recibir' (click)="getDetalleFactura()" >
+<input type='button' value='Limpiar' (click)="cleanMiDetalleFactura()" >
+
+<table class='table table-dark table-striped table-hover'>
+<thead>
+<tr>
+
+<th scope='col'>numeroFactura         </th>
+<th scope='col'>idProducto            </th>
+<th scope='col'>nombreProducto        </th>
+<th scope='col'>cantidadProducto      </th>
+<th scope='col'>precioProducto        </th>
+<th scope='col'>subtotalProducto      </th>
+<th scope='col'>fechaCompra           </th>
+<th scope='col'>nombreCliente         </th>
+<th scope='col'>nitCliente            </th>
+<th scope='col'>direccionCliente      </th>
+<th scope='col'>totalFactura          </th>
+
+</tr>
+</thead>
+
+<tbody>
+<tr class='table-secondary'  *ngFor='let mifactura of detallefactura' >
+                            
+<td scope='col'>{{         mifactura.numeroFactura                 }}</td>
+<td scope='col'>{{         mifactura.idproducto                    }}</td>
+<td scope='col'>{{         mifactura.nombreProducto                }}</td>
+<td scope='col'>{{         mifactura.cantidadProducto              }}</td>
+<td scope='col'>{{         mifactura.precioProducto                }}</td>
+<td scope='col'>{{         mifactura.subtotalProducto              }}</td>
+<td scope='col'>{{         mifactura.fechaCompra                   }}</td>
+<td scope='col'>{{         mifactura.nombreCliente                 }}</td>
+<td scope='col'>{{         mifactura.nitCliente                    }}</td>
+<td scope='col'>{{         mifactura.direccionCliente              }}</td>
+<td scope='col'>{{         mifactura.totalFactura                  }}</td>
+
+</tr>
+</tbody>
+</table>
+

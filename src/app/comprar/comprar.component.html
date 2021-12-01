@@ -1,0 +1,39 @@
+
+<a routerLink="/menu">MENU</a>
+<h5 style='position:absolute;top:0px;right:0px;'>Usuario: {{factura.usuario}}</h5>
+<br>
+<input type='button' value='Recibir' (click)="getProductos()" >
+<input type='button' value='Limpiar' (click)="cleanProductos()" >
+<input type='button' value='Carrito' (click)="verCarrito()" >
+<input type='button' value='Finalizar compra'   (click)="agregarFactura(this.factura)" >
+
+<table class='table table-dark table-striped table-hover'>
+<thead>
+		<tr>
+				<th scope='col'>ID</th>
+				<th scope='col'>NOMBRE</th>
+				<th scope='col'>DESCRIPCION</th>
+				<th scope='col'>PRECIO</th>
+				<th scope='col'>CANTIDAD</th>
+				<th scope='col'>COMANDO</th>
+		</tr>
+</thead>
+
+<tbody>
+<tr class='table-secondary'  *ngFor='let producto of productos' >
+
+<td>{{producto.id}}         </td>
+<td>{{producto.nombre}}     </td>
+<td>{{producto.descripcion}}</td>
+<td>{{producto.precio}}     </td>
+<td><input [(ngModel)]="producto.cantidad" type='number' value='0' style='width:256px;display:inline;margin-bottom:16px;' ></td>
+<!--
+<td><input name='cantidad' type='number' style='width:256px;display:inline;margin-bottom:16px;' ></td>
+<td><input [(ngModel)]="producto.cantidad" type='number' style='width:256px;display:inline;margin-bottom:16px;' ></td>
+-->
+<td><input type='button' value='Agregar al Carrito' (click)="agregarAlCarrito(producto)"></td>
+
+</tr>
+</tbody>
+</table>
+

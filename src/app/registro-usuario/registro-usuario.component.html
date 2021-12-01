@@ -1,0 +1,16 @@
+
+<a routerLink="/login" style='color:cyan;font-size:24px;'>Menu de Login</a>
+<h1 style='text-align:center;'>Registro de Usuarios</h1>
+<br>
+
+<form action='' method='post' style='width:300px;margin:auto;'>
+
+<div style='font-size:24px;'>Clave:</div><input [(ngModel)]="u.clave" name="clave" type='password' placeholder='clave' style='width:256px;display:inline;margin-bottom:16px;'> 
+<br>
+
+<input type='submit' value='Registrar' (click)='registrarUsuario(u)'   style='font-size:24px;'>
+<input type='reset'  value='Limpiar'   (click)='limpiarUsuario()'      style='font-size:24px;margin-left:32px;'>
+
+</form>
+
+
